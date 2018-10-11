@@ -25,7 +25,7 @@ export default class Example extends React.Component {
   }
   render() {
     return (
-      <Navbar color="dark" fixed dark expand="md">
+      <Navbar color="dark"  dark expand="md">
         <NavbarBrand href="#"><i className='fa fa-calendar-check-o'></i> TodoApp</NavbarBrand>
         <NavbarToggler onClick={this.toggle} />
         <Collapse isOpen={this.state.isOpen} navbar>
@@ -34,7 +34,7 @@ export default class Example extends React.Component {
               <NavLink href="#/todos">Tarefas</NavLink>
             </NavItem>
             <NavItem>
-              <NavLink href="#/sobre">Sobre</NavLink>
+              <NavLink href="#/about">Sobre</NavLink>
             </NavItem>
           </Nav>
         </Collapse>
