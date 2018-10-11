@@ -1,10 +1,18 @@
 import 'bootstrap/dist/css/bootstrap.min.css'
 import 'font-awesome/css/font-awesome.min.css'
-import '../styles/style.css';
+
 import React from 'react'
+import { Container} from 'reactstrap';
+
+import Header from '../template/menu'
+import Routes from './routes'
+
 
 export default props => (
-  <div className='container text-success'>
-    <h1>Teste</h1>
-  </div>
+  <span>
+    <Header />
+    <Container>
+        <Routes />
+    </Container>
+  </span>
 )
