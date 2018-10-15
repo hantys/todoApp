@@ -1,5 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import { combineReducers, createStore } from 'redux';
+import { Provide } from 'react-redux';
 import * as serviceWorker from './serviceWorker';
 
 import './styles/style.css';
