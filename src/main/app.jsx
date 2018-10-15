@@ -10,9 +10,9 @@ import Routes from './routes'
 
 export default props => (
   <span>
-    <Header />
     <Container>
-        <Routes />
+      <Header />
+      <Routes />
     </Container>
   </span>
 )
