@@ -1,5 +1,3 @@
-import { request } from "https";
-
 const initial = { description: '', list: [] }
 
 export default (state = initial, action) => {
