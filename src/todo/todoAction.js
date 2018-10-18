@@ -1,4 +1,5 @@
 import axios from 'axios'
+import { dispatch } from 'rxjs/internal/observable/range';
 
 const URL = 'http://localhost:3003/api/todos'
 
@@ -15,9 +16,11 @@ export const search = () => {
   }
 }
 
+
 export const add = (description) => {
-  const request = axios.post(URL, {description})
-  return [
-    { type: 'todo_added', payload: request }, search()
-  ]
+  return dispatch => {
+    axios.post(URL, {description})
+      .then(resp => dispatch({ type: 'todo_added', payload: resp.data }))
+      .then(resp => dispatch(search()))
+  }
 }
